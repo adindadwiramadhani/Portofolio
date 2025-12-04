@@ -1,29 +1,32 @@
-import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Perhatikan: Nama fungsinya kita ganti jadi AppNavbar
-function AppNavbar() {
+const AppNavbar = () => {
   return (
-    <Navbar variant="dark" expand="lg" className="py-3" style={{ backgroundColor: '#0d1117' }}>
-      <Container>
-        <Navbar.Brand as={Link} to="/" className="fw-bold fs-4">
-          <span className="text-gradient">Technical</span> Enthusiast
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
-            <Nav.Link as={Link} to="/certificates">Certificates</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-          </Nav>
-          <Button variant="primary" className="fw-bold" style={{ backgroundColor: '#5c4dff', borderColor: '#5c4dff' }}>
-            Hire Me
-          </Button>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top py-3" style={{ backgroundColor: 'rgba(5, 5, 5, 0.8)', backdropFilter: 'blur(10px)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+      <div className="container">
+        {/* Logo */}
+        <Link className="navbar-brand fw-bold fs-4" to="/">
+          <span style={{ color: "#7950f2" }}>Adinda</span>Dev
+        </Link>
+        
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        
+        <div className="collapse navbar-collapse" id="navbarNav">
+          {/* Menu Tengah */}
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item"><Link className="nav-link px-3 small text-uppercase fw-semibold" to="/">Home</Link></li>
+            {/* <li className="nav-item"><Link className="nav-link px-3 small text-uppercase fw-semibold" to="/projects">Projects</Link></li> */}
+            <li className="nav-item"><Link className="nav-link px-3 small text-uppercase fw-semibold" to="/certificates">Certificates</Link></li>
+            <li className="nav-item"><Link className="nav-link px-3 small text-uppercase fw-semibold" to="/contact">Contact</Link></li>
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
   );
-}
+};
 
 export default AppNavbar;
