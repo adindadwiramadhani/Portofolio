@@ -1,0 +1,49 @@
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --bs-body-bg: #0d1117;
+  --bs-body-color: #c9d1d9;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d1117 !important; 
+  overflow-x: hidden; 
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0d1117;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.text-gradient {
+  background: linear-gradient(90deg, #6c63ff, #e91e63);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 2.5rem; 
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .navbar-brand {
+    font-size: 1.25rem !important;
+  }
+}
