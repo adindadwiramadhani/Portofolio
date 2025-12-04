@@ -228,7 +228,7 @@ const Home = () => {
           
           {/* Deskripsi Singkat (TEXT LEBIH TERANG) */}
           <p className="text-white-50 mb-5 mx-auto fs-3 fw-light" style={{ maxWidth: '800px', textShadow: '0 0 10px rgba(255,255,255,0.1)' }}>
-            Saya seorang <span className="text-white fw-normal">Junior Developer</span>
+            Saya seorang <span className="text-white fw-normal">Technical Enthusiast</span>
           </p>
           
           {/* --- TOMBOL AKSI --- */}
